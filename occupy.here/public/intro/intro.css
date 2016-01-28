@@ -1,0 +1,152 @@
+body {
+  padding: 15px;
+  font: 18px/30px open_sans_bold;
+  color: #fff;
+  background: #222;
+}
+
+#page {
+  max-width: 800px;
+  padding-top: 30px;
+}
+
+#skip {
+  position: absolute;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #999;
+  top: 15px;
+  right: 15px;
+}
+
+#help {
+  /*visibility: hidden;*/
+  font-family: open_sans_regular;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+body.form-visible #help {
+  display: none;
+}
+
+body.form-hidden form {
+  display: none;
+}
+
+.step {
+  display: none;
+  margin-right: 4px;
+}
+
+body.has-seen-intro span.step {
+  display: inline;
+}
+
+body.has-seen-intro div.step,
+body.has-seen-intro form.step,
+body.has-seen-intro p.step {
+  display: block;
+}
+
+body.has-seen-intro li.step {
+  display: list-item;
+}
+
+body.has-seen-intro form .cover {
+  display: none;
+}
+
+body.has-seen-intro #help {
+  display: none;
+}
+
+#continue {
+  display: none;
+}
+
+body.has-seen-intro #continue {
+  display: inline-block;
+}
+
+.visible {
+  display: inline;
+}
+
+em {
+  text-decoration: underline;
+}
+
+ol li {
+  list-style: decimal;
+  margin-left: 1.5em;
+}
+
+ol, p {
+  margin-bottom: 1em;
+}
+
+form {
+  margin: 1em 0;
+}
+
+input {
+  font: 0.75em open_sans_bold;
+  padding: 0.5em;
+  border: 0;
+  color: #fff;
+  background: #666;
+}
+
+.button {
+  color: #999;
+  background: #181818;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 3px solid #666;
+  padding: 5px 10px;
+  font: 0.75em open_sans_semibold, verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  color: #fff;
+  background: #666;
+}
+
+li.visible {
+  display: list-item;
+}
+
+#skip_email {
+  font-size: 0.75em;
+  color: #999;
+}
+
+#skip_email:hover {
+  color: #fff;
+}
+
+form {
+  position: relative;
+}
+
+form .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media
+  only screen and (min-width: 830px) {
+  
+  body {
+    font: 24px/36px open_sans_bold;
+    padding: 30px;
+  }
+  
+}

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if [ -e /etc/dnsmasq.conf.$1-mode ] &&
+   [ -e /etc/config/network.$1-mode ]
+then
+  echo "Setting network mode: $1"
+else
+  echo "Invalid network mode: $1"
+  exit 1
+fi
+
+rm /etc/dnsmasq.conf
+$( ln -s /etc/dnsmasq.conf.$1-mode /etc/dnsmasq.conf )
+
+rm /etc/config/network
+$( ln -s /etc/config/network.$1-mode /etc/config/network )
+
+/etc/init.d/network restart
+/etc/init.d/dnsmasq restart
+
